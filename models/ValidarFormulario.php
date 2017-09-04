@@ -5,12 +5,14 @@ namespace app\models;
 use Yii;
 use yii\base\model;
 
-class ValidarFormulario extends model {
+class ValidarFormulario extends model
+{
 
     public $nombre;
     public $email;
 
-    public function rules() {
+    public function rules()
+    {
 
         return [
             ['nombre', 'required', 'message' => 'Campo Requerido'],
@@ -21,12 +23,13 @@ class ValidarFormulario extends model {
             ['email', 'email', 'message' => "Formato no valido"],
         ];
     }
-    
-    public function attributeLabels(){
+
+    public function attributeLabels()
+    {
         return [
             'nombre' => 'Nombre:',
-            'email'  => 'Email:',
-            
+            'email' => 'Email:',
+
         ];
     }
 

@@ -6,21 +6,22 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+
 ?>
 
 <?php
 $form = ActiveForm::begin([
-            "id" => "login-form",
-            "method" => "post",
-            "enableClientValidation" => true,
-        ])
+    "id" => "login-form",
+    "method" => "post",
+    "enableClientValidation" => true,
+])
 ?>
 
 <div class="form-group">
-    <?= $form->field($model, "nombre")->input("text"); ?>            
+    <?= $form->field($model, "nombre")->input("text"); ?>
 </div>
 <div class="form-group">
-    <?= $form->field($model, "email")->input("email"); ?>        
+    <?= $form->field($model, "email")->input("email"); ?>
 </div>
 <?= Html::submitButton("enviar", ["class" => "btn btn-primary"]) ?>
 <?php //$form->end(); ?>
